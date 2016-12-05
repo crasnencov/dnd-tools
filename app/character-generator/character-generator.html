@@ -1,0 +1,8 @@
+<div ng-controller="CharacterGeneratorCtrl as charGen">
+<p>Character generator</p>
+    <ul ng-repeat="(abilityName, abilityValue) in charGen.character.abilities">
+        <li>
+            <span ng-bind="abilityName"></span> - <span ng-bind="abilityValue"></span>
+        </li>
+    </ul>
+</div>

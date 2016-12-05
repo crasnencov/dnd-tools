@@ -1,0 +1,15 @@
+extends:
+ - "angular"
+ - "defaults/configurations/eslint"
+rules:
+  "angular/di": [0] // turn it off completely
+  "angular/controller-name": [0]
+"globals":
+ "it": true,
+ "expect": true,
+ "describe": true,
+ "sinon": true,
+ "beforeEach": true,
+ "app": true,
+ "inject": true,
+ "module": true
