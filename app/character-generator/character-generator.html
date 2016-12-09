@@ -2,23 +2,26 @@
     <div class="row">
         <div class="col s2">
             <p>Character generator</p>
-            <ul ng-repeat="(abilityName, abilityValue) in charGen.character.abilities">
+            <ul>
                 <li>
-                    <span ng-bind="abilityName"></span> - <span ng-bind="abilityValue"></span>
+                    <ability-box
+                            ability-name="'Strength'"
+                            ability="charGen.character.abilities.strength"
+                            modifier="charGen.character.modifier.strength"
+                    ><ability-box/>
                 </li>
             </ul>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col s2">
+
         </div>
     </div>
 </div>
 
 
 <div ng-controller="CharacterGeneratorCtrl as charGen">
-    <p>Character generator</p>
-    <ul>
-        <li>
-            <span ng-bind="strength"></span> - <span ng-bind="charGen.character.abilities.strength"></span>
-            <input type="text" ng-model="charGen.character.abilities.strength">
-            <span>{{charGen.character.modifiers.strength}}</span>
-        </li>
-    </ul>
+
 </div>

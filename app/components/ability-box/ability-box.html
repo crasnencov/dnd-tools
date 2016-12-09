@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<div class="ability-box-wrapper">
+    <span class="ability-title" ng-bind="$ctrl.abilityName"></span>
+    <input class="ability-box-input"
+           type="text"
+           ng-model="$ctrl.ability"
+    />
+    <div class="modifier-box">
+        <span ng-bind="$ctrl.modifier"></span>
+    </div>
+</div>

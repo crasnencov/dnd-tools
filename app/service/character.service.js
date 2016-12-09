@@ -6,7 +6,7 @@
       initCharacter: function () {
         this.character = {
           abilities: {
-            strength: 25,
+            strength: 20,
             dexterity: 14,
             constitution: 43,
             intelligence: 56,

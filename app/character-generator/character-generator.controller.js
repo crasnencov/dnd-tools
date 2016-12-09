@@ -12,18 +12,15 @@
     init();
 
     $scope.$watch(function () {
-      return vm.character.abilities;
+      return vm.character;
     }, function (newValue, oldValue) {
-      console.log('new value ' + newValue);
-      vm.character.modifiers.strength = Math.floor((newValue - 10) / 2);
-      console.log(arguments);
-      console.log('calculate modifiers ' + vm.character.modifiers.s);
+      // console.log(CharacterService.character);
     }, true);
 
     vm.onClickModifiers = function () {
-      console.log($scope);
-      CharacterService.calculateModifiers();
-      $scope.myVar = ++$scope.myVar;
+      // console.log($scope);
+      // CharacterService.calculateModifiers();
+      // $scope.myVar = ++$scope.myVar;
     };
   }
 
