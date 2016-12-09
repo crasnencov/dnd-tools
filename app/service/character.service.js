@@ -4,7 +4,7 @@
 
     return {
       initCharacter: function () {
-        this.character = {
+        return this.character = {
           abilities: {
             strength: 20,
             dexterity: 14,
@@ -23,15 +23,9 @@
           }
         };
       },
-      calculateModifiers: function () {
-        var _this = this;
-        angular.forEach(this.character.abilities, function (value, key) {
-          _this.character.modifiers[key] = Math.floor((value - 10) / 2);
-          console.log(key + ': ' + value);
-        });
-        console.log(this.character.modifiers); //angular.foreach
+      calculateModifier: function(ability) {
+        return Math.floor((ability- 10) / 2);
       }
-
     }
 
   }

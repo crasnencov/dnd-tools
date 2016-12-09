@@ -4,9 +4,7 @@
     var vm = this;
 
     function init() {
-      CharacterService.initCharacter();
-      // CharacterService.calculateModifiers();
-      vm.character = CharacterService.character;
+      vm.character = CharacterService.initCharacter();
     }
 
     init();
@@ -14,14 +12,8 @@
     $scope.$watch(function () {
       return vm.character;
     }, function (newValue, oldValue) {
-      // console.log(CharacterService.character);
+      CharacterService.character = vm.character;
     }, true);
-
-    vm.onClickModifiers = function () {
-      // console.log($scope);
-      // CharacterService.calculateModifiers();
-      // $scope.myVar = ++$scope.myVar;
-    };
   }
 
   angular.module('myApp.CharacterGenerator', ['ngRoute'])

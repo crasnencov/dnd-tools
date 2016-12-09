@@ -10,10 +10,8 @@
     controller: AbilityBoxController
   });
 
-  function AbilityBoxController ($scope) {
+  function AbilityBoxController ($scope, CharacterService, constants) {
     var ctrl = $scope.$ctrl;
-
-    console.log(ctrl);
 
     $scope.$watch(function () {
       return ctrl.ability;
@@ -25,17 +23,17 @@
       if(!onlyNumbers.test(newValue)){
         return ctrl.ability = oldValue;
       }
-      if (newValue < 0){
-        ctrl.ability = 0;
+      if (newValue < constants.MIN_ABILITY){
+        ctrl.ability = constants.MIN_ABILITY;
       }
-      if (newValue > 20){
-        ctrl.ability = 20;
+      if (newValue > constants.MAX_ABILITY){
+        ctrl.ability = constants.MAX_ABILITY;
       }
 
-      var newModifier = Math.floor((newValue- 10) / 2);
+      var newModifier = CharacterService.calculateModifier(newValue);
 
-      if (newModifier < 0){
-        ctrl.modifier = 0;
+      if (newModifier < constants.MIN_ABILITY){
+        ctrl.modifier = constants.MIN_ABILITY;
       }else {
         ctrl.modifier = newModifier;
       }
