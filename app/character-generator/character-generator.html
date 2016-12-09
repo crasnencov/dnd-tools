@@ -1,8 +1,10 @@
 <div ng-controller="CharacterGeneratorCtrl as charGen">
-<p>Character generator</p>
-    <ul ng-repeat="(abilityName, abilityValue) in charGen.character.abilities">
-        <li>
-            <span ng-bind="abilityName"></span> - <span ng-bind="abilityValue"></span>
-        </li>
-    </ul>
+  <p>Character generator</p>
+  <ul>
+    <li>
+      <span ng-bind="strength"></span> - <span ng-bind="charGen.character.abilities.strength"></span>
+      <input type="text" ng-model="charGen.character.abilities.strength">
+      <span>{{charGen.character.modifiers.strength}}</span>
+    </li>
+  </ul>
 </div>
