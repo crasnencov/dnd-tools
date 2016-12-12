@@ -5,6 +5,8 @@
 
     function init() {
       vm.character = CharacterService.initCharacter();
+      console.log('init vm.character: ');
+      console.log(vm.character);
     }
 
     init();
@@ -13,6 +15,8 @@
       return vm.character;
     }, function (newValue, oldValue) {
       CharacterService.character = vm.character;
+      console.log('watch vm.character: ');
+      console.log(vm.character);
     }, true);
   }
 

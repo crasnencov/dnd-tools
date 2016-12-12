@@ -6,12 +6,12 @@
       initCharacter: function () {
         return this.character = {
           abilities: {
-            strength: 20,
+            strength: 40,
             dexterity: 14,
-            constitution: 43,
-            intelligence: 56,
+            constitution: 16,
+            intelligence: 18,
             wisdom: 12,
-            charisma: 43
+            charisma: 9
           },
           modifiers: {
             strength: 0,
