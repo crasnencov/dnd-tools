@@ -1,27 +1,16 @@
-<div class="container character-generator-wrapper" ng-controller="CharacterGeneratorCtrl as charGen">
-  <div class="row">
-    <div class="col s2">
-      <p>Character generator</p>
-      <ul>
-        <li ng-repeat="(abilityName, abilityValue) in charGen.character.abilities">
-          <ability-box
-              ability-name="abilityName"
-              ability="charGen.character.abilities[abilityName]"
-              modifier="charGen.character.modifiers[abilityName]"
-          />
-        </li>
-      </ul>
-    </div>
-
+<div class="container character-generator-wrapper">
+    <div class="row">
+        <div class="col s2">
+            <p>Character generator</p>
+            <ul>
+                <li ng-repeat="(key, val) in charGen.character.abilities">
+                    <ability-box
+                            ability-name="key"
+                            ability="charGen.character.abilities[key]"
+                            modifier="charGen.character.modifiers[key]"
+                    ><ability-box/>
+                </li>
+            </ul>
+        </div>
   </div>
-  <div class="row">
-    <div class="col s2">
-
-    </div>
-  </div>
-</div>
-
-
-<div ng-controller="CharacterGeneratorCtrl as charGen">
-
 </div>

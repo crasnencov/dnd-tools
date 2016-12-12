@@ -4,7 +4,7 @@
 
     return {
       initCharacter: function () {
-        return this.character = {
+        this.character = {
           abilities: {
             strength: 40,
             dexterity: 14,
@@ -22,6 +22,7 @@
             charisma: 0
           }
         };
+        return this.character
       },
       calculateModifier: function(ability) {
         return Math.floor((ability- 10) / 2);
