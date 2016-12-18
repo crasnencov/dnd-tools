@@ -1,9 +1,13 @@
 'use strict';
 (function () {
-  function CharacterGeneratorCtrl($scope, CharacterService) {
+  function CharacterGeneratorCtrl($scope, CharacterService, $http) {
     var vm = this;
 
     function init() {
+      $http.get('./translations/en.json')
+        .then(function(res){
+          console.log(res);
+        });
       if(!vm.character){
         vm.character = CharacterService.initCharacter();
       }
@@ -20,9 +24,7 @@
         controller: CharacterGeneratorCtrl,
         controllerAs: 'charGen'
       });
-    }])
-
-    .controller('CharacterGeneratorCtrl', ['$scope', 'CharacterService']);
+    }]);
 })();
 
 
