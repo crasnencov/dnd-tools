@@ -1,6 +1,6 @@
 'use strict';
 (function () {
-  function CharacterGeneratorCtrl($scope, CharacterService, $http) {
+  function CharacterGeneratorCtrl($scope, CharacterService, DiceService, $http) {
     var vm = this;
 
     function init() {
@@ -14,6 +14,14 @@
     }
 
     init();
+
+    vm.diceCount = function (diceNumber) {
+      vm.result = DiceService.diceCount(diceNumber);
+    };
+
+    vm.generateAbility = function (diceNumber) {
+      vm.resultAbility = DiceService.generateAbility(diceNumber);
+    };
   }
 
   angular.module('myApp.CharacterGenerator', ['ngRoute'])

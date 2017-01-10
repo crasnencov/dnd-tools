@@ -6421,15 +6421,12 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   .picker--time .picker__box {
     margin-bottom: 5em; } }
 
-input[type=text], input[type=text]:focus:not([readonly]) {
-  text-align: center;
-  font-size: 3rem;
-  margin: 0;
-  border: none;
-  box-shadow: none;
-  color: #575D90; }
+.ability-box-wrapper div {
+  display: inline-block;
+  width: 30%;
+  border: 2px solid; }
 
-.modifier-box {
+.ability-title-short {
   text-align: left;
   border: 1px solid #434b54;
   color: #434b54;

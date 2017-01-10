@@ -24,8 +24,8 @@
         };
         return this.character
       },
-      calculateModifier: function(ability) {
-        return Math.floor((ability- 10) / 2);
+      calculateModifier: function (ability) {
+        return Math.floor((ability - 10) / 2);
       }
     }
 
