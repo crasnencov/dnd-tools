@@ -3,6 +3,8 @@
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
   'ngRoute',
+  'pascalprecht.translate',
+
   'myApp.CharacterGenerator',
   'myApp.view2',
   'myApp.version'
